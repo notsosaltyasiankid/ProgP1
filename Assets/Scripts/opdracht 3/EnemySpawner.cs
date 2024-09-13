@@ -36,12 +36,12 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        elapsedTime = Time.deltaTime;
-
+        elapsedTime += Time.deltaTime;
         if (elapsedTime >= 1f)
         {
             createThree();
             elapsedTime = 0f;
+            Debug.Log(elapsedTime);
         }
         if (Input.GetKeyDown(KeyCode.W))
         {

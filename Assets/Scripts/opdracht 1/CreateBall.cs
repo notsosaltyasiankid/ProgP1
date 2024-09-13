@@ -13,8 +13,14 @@ using UnityEngine;
         {
             GameObject ball = Instantiate(Prefab, new Vector3(UnityEngine.Random.Range(-20,20), UnityEngine.Random.Range(-10, 10), UnityEngine.Random.Range(-20,20)), Quaternion.identity);
             balls.Add(ball);
-            Material material = ball.GetComponent<MeshRenderer>().material;
-            material.SetColor("_Color", c);
+            Material mat = ball.GetComponent<MeshRenderer>().material;
+
+            if (mat.shader.name == "Universal Render Pipeline/Lit")
+            {
+                mat.SetColor("_BaseColor", c);
+            }
+
+
             DestroyBall();
             return ball;
         }
@@ -37,7 +43,7 @@ using UnityEngine;
                 float g = UnityEngine.Random.Range(0f, 1f);
                 float b = UnityEngine.Random.Range(0f, 1f);
                 Color randColor = new Color(r, g, b, 1f);
-
+                Debug.Log(randColor);
                 GameObject newBall = createball(randColor);
                 Secondballs.Add(newBall);
             }
