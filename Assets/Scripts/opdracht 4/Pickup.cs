@@ -6,6 +6,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public static event Action scoreAdd;
+    public int score = 50;
     // Start is called before the first frame update
     void Start()
     {

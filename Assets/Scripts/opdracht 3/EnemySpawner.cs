@@ -41,10 +41,10 @@ public class EnemySpawner : MonoBehaviour
         {
             createThree();
             elapsedTime = 0f;
-            Debug.Log(elapsedTime);
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
+            Debug.Log("pressed W");
             createwave();
         }
         if (Input.GetKeyDown(KeyCode.Q))

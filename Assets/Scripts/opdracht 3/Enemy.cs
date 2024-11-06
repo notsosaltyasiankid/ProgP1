@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Rigidbody rigidbody;
+    [SerializeField] Rigidbody figidbody;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,6 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody.AddForce(new Vector3(0, 0, 5));
+        figidbody.AddForce(new Vector3(0, 0, 5));
     }
 }
