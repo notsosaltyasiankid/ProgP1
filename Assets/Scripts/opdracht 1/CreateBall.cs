@@ -75,6 +75,7 @@ public class CreateBall : MonoBehaviour
         elapsedTime += Time.deltaTime;
         if (elapsedTime > 1f)
         {
+            Debug.Log("Spawned ball");
             Color randColor = GenerateRandomColor();
             GameObject newBall = createball(randColor);
             elapsedTime = 0f;
