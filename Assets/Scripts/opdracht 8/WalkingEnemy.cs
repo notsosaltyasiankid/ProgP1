@@ -27,4 +27,11 @@ public class WalkingEnemy : MonoBehaviour
             Destroy(gameObject); 
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            HPChecking();
+        }
+    }
 }
