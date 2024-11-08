@@ -30,11 +30,4 @@ public class Elf : WalkingEnemy
             IngameTime = 0;
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Bullet"))
-        { 
-            HPChecking();
-        }
-    }
 }
